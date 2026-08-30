@@ -1,0 +1,38 @@
+{
+  "name": "genpark-multimodal-document-layout-ast-parser-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multimodal document layout AST parser transforming complex PDF tables, charts, and mathematical formulas into structured trees.",
+  "author": "genpark",
+  "category": "document-parser",
+  "tags": [
+    "docling",
+    "pdf-parser",
+    "document-ast",
+    "table-extraction",
+    "multimodal-ocr"
+  ],
+  "inputs": {
+    "document_pdf_url": {
+      "type": "string"
+    },
+    "parse_tables_as_html": {
+      "type": "boolean"
+    }
+  },
+  "outputs": {
+    "parsing_job_id": {
+      "type": "string"
+    },
+    "pages_parsed_count": {
+      "type": "integer"
+    },
+    "reading_order_recovery_accuracy_pct": {
+      "type": "number"
+    },
+    "unified_markdown_export_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
